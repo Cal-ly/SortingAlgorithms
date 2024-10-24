@@ -28,7 +28,7 @@ public static class UserInterface
         Console.WriteLine("3. Quick Sort");
         Console.WriteLine("4. Selection Sort");
         Console.WriteLine("5. Shell Sort");
-        //Console.WriteLine("6. Merge Sort");
+        Console.WriteLine("6. Merge Sort");
         Console.WriteLine("0. Exit");
 
         string? input = Console.ReadLine();
