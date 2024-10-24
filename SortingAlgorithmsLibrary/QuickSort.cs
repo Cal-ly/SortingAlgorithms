@@ -1,7 +1,12 @@
 ﻿namespace SortingAlgorithmsLibrary;
 public static class QuickSort
 {
-    public static void QuickSorting(int[] array, int low, int high)
+    public static void QuickSorting(int[] array)
+    {
+        QuickSorting(array, 0, array.Length - 1);
+    }
+
+    private static void QuickSorting(int[] array, int low, int high)
     {
         if (low < high)
         {
@@ -20,7 +25,7 @@ public static class QuickSort
             if (array[j] < pivot)
             {
                 i++;
-                (array[i], array[j]) = (array[j], array[i]); // Tuple swap i C# 12
+                (array[i], array[j]) = (array[j], array[i]); // Tuple swap in C# 12
             }
         }
         (array[i + 1], array[high]) = (array[high], array[i + 1]);
