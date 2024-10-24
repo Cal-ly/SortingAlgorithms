@@ -17,6 +17,9 @@ while (true)
     fileIndex = UserInterface.GetFileIndex(txtFiles);
     var selectedFile = txtFiles[fileIndex];
 
+    // Read numbers from the selected file
+    var numbers = ImportText.ImportAndPrune(selectedFile);
+
     // Step 2: Provide sorting algorithm options
     int algorithmIndex = UserInterface.GetAlgorithmIndex();
 
@@ -27,9 +30,6 @@ while (true)
     // Initialize stopwatch and metrics if needed
     MyStopwatch? stopwatch = measureTime ? new MyStopwatch() : null;
     MetricsHelper? metrics = measureMetrics ? new MetricsHelper() : null;
-
-    // Read numbers from the selected file
-    var numbers = File.ReadAllLines(selectedFile).Select(int.Parse).ToArray();
 
     // Start stopwatch if needed
     stopwatch?.Start();
@@ -69,6 +69,7 @@ while (true)
     // Display results
     if (measureTime)
         Console.WriteLine($"Elapsed Time: {stopwatch?.ElapsedTime}");
+        Console.WriteLine($"Elapsed Time in Microseconds: {stopwatch?.ElapsedMicroseconds}");
 
     if (measureMetrics)
         Console.WriteLine($"Operation Count: {metrics?.OperationCount}");

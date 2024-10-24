@@ -32,10 +32,10 @@ public static class UserInterface
         Console.WriteLine("0. Exit");
 
         string? input = Console.ReadLine();
-        if (string.IsNullOrEmpty(input) || !int.TryParse(input, out algorithmIndex) || algorithmIndex < 1 || algorithmIndex > 5)
+        while(string.IsNullOrEmpty(input) || !int.TryParse(input, out algorithmIndex) || algorithmIndex < 0 || algorithmIndex > 6)
         {
             Console.WriteLine("Invalid input. Please enter a valid number corresponding to an algorithm.");
-            Environment.Exit(0);
+            input = Console.ReadLine();
         }
         return algorithmIndex;
     }

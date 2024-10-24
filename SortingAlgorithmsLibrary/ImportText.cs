@@ -1,7 +1,7 @@
 ﻿namespace SortingAlgorithmsLibrary;
-public class ImportText
+public static class ImportText
 {
-    public int[] ImportAndPrune(string filePath)
+    public static int[] ImportAndPrune(string filePath)
     {
         // Read all lines from the file
         var lines = File.ReadAllLines(filePath);

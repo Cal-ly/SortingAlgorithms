@@ -24,4 +24,6 @@ public class MyStopwatch
     }
 
     public TimeSpan ElapsedTime => _stopwatch.Elapsed;
+
+    public long ElapsedMicroseconds => _stopwatch.ElapsedTicks / (TimeSpan.TicksPerMillisecond / 1000);
 }
