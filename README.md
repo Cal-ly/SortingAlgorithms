@@ -21,8 +21,9 @@ The following sorting algorithms are included in this repository:
 1. **Bubble Sort**: A simple comparison-based algorithm where each pair of adjacent elements is compared and swapped if they are in the wrong order.
 2. **Selection Sort**: An algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right, and a sublist of the remaining unsorted items.
 3. **Insertion Sort**: Builds the final sorted array one item at a time, with the assumption that the initial items are already sorted.
-4. **Merge Sort**: A divide-and-conquer algorithm that splits the list into smaller sublists, sorts them, and then merges them back together.
-5. **Quick Sort**: Another divide-and-conquer algorithm that picks an element as a pivot and partitions the array around the pivot.
+4. **Quick Sort**: Another divide-and-conquer algorithm that picks an element as a pivot and partitions the array around the pivot.
+5. **Shell Sort**: in-place comparison sort. It can be seen as either a generalization of sorting by exchange or sorting by insertion.
+6. **Merge Sort**: A divide-and-conquer algorithm that splits the list into smaller sublists, sorts them, and then merges them back together.
 
 ## Usage
 
